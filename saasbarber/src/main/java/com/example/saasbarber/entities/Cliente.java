@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "tb_users")
-public class User {
+@Table (name = "tb_client")
+public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class User {
 	private Integer cpf;
 	private Date dateNasc;
 	
-	public User () {
+	public Cliente () {
 	}
 	
-	public User (Long id, String name, String email, String password, 	Integer cpf, Date dateNasc) {
+	public Cliente (Long id, String name, String email, String password, 	Integer cpf, Date dateNasc) {
 		this.id = id;
 		this.name = name;
 		this.email = email;

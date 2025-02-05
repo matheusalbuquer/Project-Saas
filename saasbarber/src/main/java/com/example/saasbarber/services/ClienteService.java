@@ -5,14 +5,14 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.example.saasbarber.repositories.UserRepository;
+import com.example.saasbarber.repositories.ClienteRepository;
 import com.example.saasbarber.dto.UserDTO;
-import com.example.saasbarber.entities.User;
+import com.example.saasbarber.entities.Cliente;
 
 import jakarta.transaction.Transactional;
 
 @Service
-public class UserService {
+public class ClienteService {
 
 
 	

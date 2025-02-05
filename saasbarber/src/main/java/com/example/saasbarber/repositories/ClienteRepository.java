@@ -3,9 +3,9 @@ package com.example.saasbarber.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.saasbarber.entities.User;
+import com.example.saasbarber.entities.Cliente;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
 }
