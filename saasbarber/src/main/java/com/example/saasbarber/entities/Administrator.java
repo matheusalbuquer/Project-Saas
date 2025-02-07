@@ -4,10 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_admininstrator")
+@Table(name = "tb_administrator") // Corrected table name
+
 public class Administrator {
 
 	@Id
@@ -18,11 +21,14 @@ public class Administrator {
 	private String email;
 	private String password;
 
+	@ManyToOne
+	@JoinColumn(name = "usuario_id") // The foreign key column in the cliente table
+	private Usuario usuario;
+	
 	public Administrator () {
 	}
 	
-	public Administrator (Long id, String name, String email,String password) {
-		this.id = id;
+	public Administrator (String name, String email,String password) {
 		this.name = name;
 		this.email = email;
 		this.password = password;

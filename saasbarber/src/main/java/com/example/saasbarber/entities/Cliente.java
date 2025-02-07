@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,6 +22,10 @@ public class Cliente {
 	private String password;
 	private Integer cpf;
 	private Date dateNasc;
+	
+	@ManyToOne
+	@JoinColumn(name = "usuario_id") // The foreign key column in the cliente table
+	private Usuario usuario;
 	
 	public Cliente () {
 	}
